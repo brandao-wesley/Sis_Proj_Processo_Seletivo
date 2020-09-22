@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29319.158
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalPorg", "AnalPorg\AnalPorg.csproj", "{C85FBE3F-C413-45A6-9272-B0559C579377}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalProg", "AnalPorg\AnalProg.csproj", "{C85FBE3F-C413-45A6-9272-B0559C579377}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listagem_Vendas", "Listagem_Vendas\Listagem_Vendas.csproj", "{BABC12F6-57A3-4119-966B-A53D4CC1D40D}"
 EndProject
