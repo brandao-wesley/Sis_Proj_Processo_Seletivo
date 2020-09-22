@@ -1,0 +1,75 @@
+﻿@model PagedList.IPagedList<AnalPorg.Models.Colaboradores>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<br />
+<h2>LISTAGEM DE COLABORADORES</h2>
+<br />
+<div class="card-body">
+    <div id="table" class="table-editable">
+        <span class="table-add float-right mb-3 mr-2">
+            <a href="@Url.Action("Create", "Colaboradores")" class="btn btn-outline-success">
+                <i class="fa fa-user mr-1"></i>
+                <span class="ui-button-icons-only" aria-hidden="true"></span>
+                Cadastrar Colaboradores
+            </a>
+        </span>
+    </div>
+</div>
+
+<table class="table table-bordered table-responsive-md table-striped text-center">
+    <tr>
+        <th class="text-center">Nome</th>
+        <th class="text-center">Matricula</th>
+        <th class="text-center">Ações</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                <span class="table-editable">
+                    <a href="@Url.Action("Edit" + "/" + item.Id, "Colaboradores")" class="btn btn-outline-success">
+                        <i class="fa fa-edit mr-1"></i>
+                        <span class="ui-button-icons-only" aria-hidden="true"></span>Editar
+                    </a>
+                </span>
+
+                <span class="table-editable">
+                    <a href="@Url.Action("Details" +"/"+ item.Id, "Colaboradores")" class="btn btn-outline-info">
+                        <i class="fa fa-info-circle mr-1"></i>
+                        <span class="ui-button-icons-only" aria-hidden="true"></span>Detalhes
+                    </a>
+                </span>
+                <span class="table-editable">
+                    <a href="@Url.Action("Delete" + "/" + item.Id, "Colaboradores")" class="btn btn-outline-danger">
+                        <i class="fa fa-exclamation mr-1"></i>
+                        <span class="ui-button-icons-only" aria-hidden="true"></span>Deletar
+                    </a>
+                </span>
+
+            </td>
+        </tr>
+    }
+</table>
+<!-- Editable table -->
+<div class="panel-footer">
+    Pagina @Model.PageNumber de @Model.PageCount
+    @Html.PagedListPager(Model, pagina => Url.Action("Index", new
+                   {
+                       pagina = pagina
+                   }))
+</div>
+
+    <INPUT class="mvc-grid-pager-rows" type="hidden" value="4">

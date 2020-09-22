@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Sistema (Processo Seletivo)</h1>
+    <p class="lead">CRUD Simples para Cadastro de Colaboradores e suas Vendas.</p>
+ </div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Cadastro de Colaboradores</h3>
+        <p>
+            Transação para cadastrar novos colaboradores e/ou realizar controles no Cadastro dos Colaboradores
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index","Colaboradores")">Acessar</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Cadastrar Vendas</h3>
+        <p>Transação para cadastro e/ou realizar os controles no cadastro das Vendas</p>
+        <p><a class="btn btn-default"  href="@Url.Action("Index","Vendas")">Acessar</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Controle de Acesso</h3>
+        <p>EM BREVE</p>
+        <br />
+        <p><a class="btn btn-default" href="#">Acessar</a></p>
+    </div>
+</div>
